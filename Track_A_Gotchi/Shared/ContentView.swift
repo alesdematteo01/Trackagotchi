@@ -17,11 +17,9 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .offset( y: -40)
                 TabView{
-                    ChooseRoutineView(imageName: "pet1", routineTitle: "Routine1", description: "Routine bella", page: 1)
+                    ChooseRoutineView(routine: routine1)
                     
-                    ChooseRoutineView(imageName: "pet1", routineTitle: "Routine2", description: "Routine carina", page: 2)
-                    
-                    ChooseRoutineView(imageName: "pet1", routineTitle: "Routine3", description: "Routine pessima", page: 3)
+                    ChooseRoutineView(routine: routine2)
                 }
 //                .navigationTitle("Choose a pet!")
 //                .navigationBarTitle(Text("x"))

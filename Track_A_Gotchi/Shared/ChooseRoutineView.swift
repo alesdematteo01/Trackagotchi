@@ -7,19 +7,19 @@
 
 import SwiftUI
 
+
+
 struct ChooseRoutineView: View {
     
-    let imageName: String
-    let routineTitle: String
-    let description: String
-    let page: Int
+    let routine: Routine
+    @State var didYouChooseYourRoutine = false
     
     var body: some View {
         VStack{
-            Image(imageName)
+            Image(routine.imageName)
                 .scaleEffect(0.8)
                 .offset(y: -50)
-            Text(routineTitle)
+            Text(routine.routineTitle)
                 .font(.title2)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
@@ -44,6 +44,12 @@ struct ChooseRoutineView: View {
                         Spacer()
                     }
                 }
+                Text(routine.description)
+                        .font(.body)
+                        .fontWeight(.regular)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                    .offset(y: -50)
                 HStack {
                     Spacer()
                     if(page != 3){
@@ -58,13 +64,19 @@ struct ChooseRoutineView: View {
                 }
             }
             Spacer()
-            NavigationLink(destination: MainScreenView()) { Text("Choose!")
-                    .foregroundColor(.white)
-                    .frame(width: 110, height: 50, alignment: .center)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                
+            Button("Choose!") {
+                choosenRoutine = routine
+                didYouChooseYourRoutine = true
             }
+            .foregroundColor(.white)
+            .frame(width: 110, height: 50, alignment: .center)
+            .background(Color.blue)
+            .cornerRadius(10)
+            
+            NavigationLink(destination: MainScreenView(), isActive: $didYouChooseYourRoutine){
+                EmptyView()
+            }
+
             Spacer()
         }
     }
