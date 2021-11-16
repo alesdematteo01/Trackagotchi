@@ -35,7 +35,7 @@ struct ChooseRoutineView: View {
                 HStack {
                     if(page != 1){
                         Text("""
-                             Destra \(Image(systemName: "chevron.left"))
+                             \(Image(systemName: "chevron.left"))
                              """)
                             .font(.title)
                             .fontWeight(.bold)
@@ -48,7 +48,7 @@ struct ChooseRoutineView: View {
                     Spacer()
                     if(page != 3){
                         Text("""
-                             Sinistra \(Image(systemName: "chevron.right"))
+                             \(Image(systemName: "chevron.right"))
                              """)
                             .font(.title)
                             .fontWeight(.bold)
