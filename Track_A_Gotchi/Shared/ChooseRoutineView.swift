@@ -26,28 +26,35 @@ struct ChooseRoutineView: View {
                 .padding(.bottom)
                 .offset(y: -50)
             ZStack {
+                Text(description)
+                    .font(.body)
+                    .fontWeight(.regular)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom)
+                .offset(y: -50)
                 HStack {
                     if(page != 1){
-                        Text("< Swipe")
-                            .fontWeight(.light)
+                        Text("""
+                             Destra \(Image(systemName: "chevron.left"))
+                             """)
+                            .font(.title)
+                            .fontWeight(.bold)
                             .foregroundColor(Color.blue)
                             .padding()
                         Spacer()
                     }
                 }
-                    Text(description)
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom)
-                    .offset(y: -50)
                 HStack {
                     Spacer()
-                    Text("Swipe >")
-                        .fontWeight(.light)
-                        .foregroundColor(Color.blue)
-                        .padding()
-                    
+                    if(page != 3){
+                        Text("""
+                             Sinistra \(Image(systemName: "chevron.right"))
+                             """)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.blue)
+                            .padding()
+                    }
                 }
             }
             Spacer()
@@ -62,5 +69,3 @@ struct ChooseRoutineView: View {
         }
     }
 }
-
-
