@@ -12,9 +12,9 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 TabView{
-                    ChooseRoutineView(imageName: "pet1", routineTitle: "Routine1", description: "Routine bella", page: 1)
+                    ChooseRoutineView(routine: routine1)
                     
-                    ChooseRoutineView(imageName: "pet1", routineTitle: "Routine2", description: "Routine carina", page: 2)
+                    ChooseRoutineView(routine: routine2)
                 }
                 .navigationTitle("Choose a pet!")
                 .navigationBarTitle(Text("x"))
