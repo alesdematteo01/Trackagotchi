@@ -26,14 +26,14 @@ struct ChooseRoutineView: View {
                 .padding(.bottom)
                 .offset(y: -50)
             ZStack {
-                Text(description)
+                Text(routine.description)
                     .font(.body)
                     .fontWeight(.regular)
                     .multilineTextAlignment(.center)
                     .padding(.bottom)
                 .offset(y: -50)
                 HStack {
-                    if(page != 1){
+                    if(routine.page != 1){
                         Text("""
                              \(Image(systemName: "chevron.left"))
                              """)
@@ -52,7 +52,7 @@ struct ChooseRoutineView: View {
                     .offset(y: -50)
                 HStack {
                     Spacer()
-                    if(page != 3){
+                    if(routine.page != 3){
                         Text("""
                              \(Image(systemName: "chevron.right"))
                              """)
@@ -72,6 +72,7 @@ struct ChooseRoutineView: View {
             .frame(width: 110, height: 50, alignment: .center)
             .background(Color.blue)
             .cornerRadius(10)
+            .offset(y:-25)
             
             NavigationLink(destination: MainScreenView(), isActive: $didYouChooseYourRoutine){
                 EmptyView()

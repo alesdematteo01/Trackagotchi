@@ -20,6 +20,8 @@ struct ContentView: View {
                     ChooseRoutineView(routine: routine1)
                     
                     ChooseRoutineView(routine: routine2)
+                    
+                    ChooseRoutineView(routine: routine3)
                 }
 //                .navigationTitle("Choose a pet!")
 //                .navigationBarTitle(Text("x"))
