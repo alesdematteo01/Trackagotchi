@@ -17,5 +17,3 @@ struct Routine {
 let routine1 = Routine.init(imageName: "pet1", routineTitle: "Routine1", description: "Routine bella", page: 1)
 let routine2 = Routine.init(imageName: "pet1", routineTitle: "Routine2", description: "Routine carina", page: 2)
 
-var choosenRoutine: Routine = routine1
-

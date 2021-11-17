@@ -18,13 +18,13 @@ struct ContentView: View {
                 }
                 .navigationTitle("Choose a pet!")
                 .navigationBarTitle(Text("x"))
-                .navigationBarBackButtonHidden(true)
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
 
             }
-
         }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 
