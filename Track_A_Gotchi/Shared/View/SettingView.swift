@@ -17,7 +17,7 @@ struct SettingView: View {
                     .frame(width: 100, height: 100)
                 Spacer()
                 List{
-                    Section{
+                    Section(header: Text("Label 1")){
                         Button("Opzione 1") {
                             self.showModal.toggle()
                         }.sheet(isPresented: $showModal){
@@ -34,7 +34,7 @@ struct SettingView: View {
                             ModalSetting2(showModal: self.$showModal)
                         }
                     }
-                    Section{
+                    Section(header: Text("Label 2")){
                         Button("Opzione 1") {
                             self.showModal.toggle()
                         }.sheet(isPresented: $showModal){
@@ -51,18 +51,13 @@ struct SettingView: View {
                             ModalSetting2(showModal: self.$showModal)
                         }
                     }
-                    Section{
+                    Section(header: Text("Label 3")){
                         Button("Opzione 1") {
                             self.showModal.toggle()
                         }.sheet(isPresented: $showModal){
                             ModalSetting1(showModal: self.$showModal)
                         }
                         Button("Opzione 2") {
-                            self.showModal.toggle()
-                        }.sheet(isPresented: $showModal){
-                            ModalSetting2(showModal: self.$showModal)
-                        }
-                        Button("Opzione 3") {
                             self.showModal.toggle()
                         }.sheet(isPresented: $showModal){
                             ModalSetting2(showModal: self.$showModal)
