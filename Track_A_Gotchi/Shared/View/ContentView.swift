@@ -23,9 +23,6 @@ struct ContentView: View {
                     
                     ChooseRoutineView(routine: routine3)
                 }
-//                .navigationTitle("Choose a pet!")
-//                .navigationBarTitle(Text("x"))
-                .navigationBarBackButtonHidden(true)
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
 
@@ -38,6 +35,8 @@ struct ContentView: View {
                   alignment: .topLeading
                 )
         }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 

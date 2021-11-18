@@ -11,13 +11,13 @@ import SwiftUI
 
 struct ChooseRoutineView: View {
     
-    let routine: Routine
-    @State var didYouChooseYourRoutine = false
+    @State var routine: Routine
     
     var body: some View {
         VStack{
             Image(routine.imageName)
-                .scaleEffect(0.8)
+                .resizable()
+                .frame(width: 300, height: 300, alignment: .center)
                 .offset(y: -50)
             Text(routine.routineTitle)
                 .font(.title2)
@@ -64,19 +64,23 @@ struct ChooseRoutineView: View {
                     }
                 }
             }
-            Spacer()
-            Button("Choose!") {
-                choosenRoutine = routine
-                didYouChooseYourRoutine = true
-            }
-            .foregroundColor(.white)
-            .frame(width: 110, height: 50, alignment: .center)
-            .background(Color.blue)
-            .cornerRadius(10)
-            .offset(y:-25)
             
-            NavigationLink(destination: MainScreenView(), isActive: $didYouChooseYourRoutine){
-                EmptyView()
+            Spacer()
+//            Button("Choose!") {
+//                choosenRoutine = routine
+//            }
+//            .foregroundColor(.white)
+//            .frame(width: 110, height: 50, alignment: .center)
+//            .background(Color.blue)
+//            .cornerRadius(10)
+//            .offset(y:-25)
+            
+            NavigationLink(destination: MainProfileView(routine: $routine)){
+                Text("Choose!")
+                    .foregroundColor(.white)
+                    .frame(width: 110, height: 50, alignment: .center)
+                    .background(Color.blue)
+                    .cornerRadius(10)
             }
 
             Spacer()
@@ -84,3 +88,6 @@ struct ChooseRoutineView: View {
         .frame(width: .infinity, height: .infinity, alignment: .topLeading)
     }
 }
+
+
+
