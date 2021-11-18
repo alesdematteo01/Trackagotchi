@@ -11,8 +11,7 @@ import SwiftUI
 
 struct ChooseRoutineView: View {
     
-    let routine: Routine
-    @State var didYouChooseYourRoutine = false
+    @State var routine: Routine
     
     var body: some View {
         VStack{
@@ -64,6 +63,7 @@ struct ChooseRoutineView: View {
                     }
                 }
             }
+            
             Spacer()
             Button("Choose!") {
                 choosenRoutine = routine
@@ -75,8 +75,12 @@ struct ChooseRoutineView: View {
             .cornerRadius(10)
             .offset(y:-25)
             
-            NavigationLink(destination: MainScreenView(), isActive: $didYouChooseYourRoutine){
-                EmptyView()
+            NavigationLink(destination: MainScreenView(routine: $routine)){
+                Text("Choose!")
+                    .foregroundColor(.white)
+                    .frame(width: 110, height: 50, alignment: .center)
+                    .background(Color.blue)
+                    .cornerRadius(10)
             }
 
             Spacer()

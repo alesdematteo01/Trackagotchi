@@ -10,8 +10,11 @@ import SwiftUI
 
 
 struct MainScreenView: View {
+    @Binding var routine : Routine
     var body: some View {
-        Text(choosenRoutine.routineTitle)
+        Text(routine.routineTitle)
+            .navigationBarBackButtonHidden(true)
+
     }
 }
 
