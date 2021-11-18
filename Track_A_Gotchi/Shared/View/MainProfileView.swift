@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainProfileView: View {
-    @Binding var routine: Routine
+@Binding var routine: Routine
     var body: some View {
         // 1. Top section: header bar + character slot
         VStack(alignment: .leading, spacing: 0) {
@@ -154,6 +154,14 @@ struct MainProfileView: View {
         )
         .background(Color.white)
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+//        .navigationBarTitle(Text("Home"))
+//        .edgesIgnoringSafeArea([.top, .bottom])
     }
 }
 
+//struct MainProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainProfileView()
+//    }
+//}

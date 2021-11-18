@@ -72,8 +72,10 @@ struct SettingView: View {
                         .frame(width: 200, height: 50, alignment: .center)
                         .background(Color.blue)
                         .cornerRadius(10)
-                }.navigationTitle("Setting")
+                }
+                
             }
+            .navigationTitle("Setting")
         }
     }
 }
