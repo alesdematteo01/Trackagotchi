@@ -30,6 +30,7 @@
 		44682CA827455D630023B683 /* ModalSetting2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44682CA627455D620023B683 /* ModalSetting2.swift */; };
 		44DFC5842743F7F7006112D0 /* RoutineStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFC5832743F7F7006112D0 /* RoutineStruct.swift */; };
 		44DFC5852743F7F7006112D0 /* RoutineStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFC5832743F7F7006112D0 /* RoutineStruct.swift */; };
+		95B7D90F2746B31C00E0D49F /* ModalStopTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */; };
 		95DD8C3D2746AAD800471C55 /* TimeTrackingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */; };
 		95DF08FF2745418400F8C47E /* MainProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF08FE2745418400F8C47E /* MainProfileView.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		44682CA327455BE10023B683 /* ModalSetting1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSetting1.swift; sourceTree = "<group>"; };
 		44682CA627455D620023B683 /* ModalSetting2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSetting2.swift; sourceTree = "<group>"; };
 		44DFC5832743F7F7006112D0 /* RoutineStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStruct.swift; sourceTree = "<group>"; };
+		95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalStopTracking.swift; sourceTree = "<group>"; };
 		95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingScreenView.swift; sourceTree = "<group>"; };
 		95DF08FE2745418400F8C47E /* MainProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */,
 				4435C9842746B0CC002A9648 /* InventoryView.swift */,
 				4435C97D2746A32D002A9648 /* Model */,
+				95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B7D90F2746B31C00E0D49F /* ModalStopTracking.swift in Sources */,
 				44DFC5842743F7F7006112D0 /* RoutineStruct.swift in Sources */,
 				4435C9852746B0CC002A9648 /* InventoryView.swift in Sources */,
 				44533E1A2742DC4C001A3BD5 /* ContentView.swift in Sources */,
