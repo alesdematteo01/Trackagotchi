@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var timer: TimerClass
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -37,11 +39,43 @@ struct ContentView: View {
         }
         .navigationBarBackButtonHidden(true)
 
+        
+        .onAppear {
+            print("⚪️ On appear notification received")
+            timer.setUpTimer()
+        }
+        
+        .onReceive(timer.timer) { time in
+            
+            if timer.timeRemaining > 0 {
+                timer.timeRemaining -= 1
+            }
+        }
+        
+        
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            print("🔵 willResignActiveNotification received")
+            
+            timer.saveRemainingTime()
+        }
+        
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willTerminateNotification)) { _ in
+            print("🔴 willTerminateNotification received")
+            timer.saveRemainingTime()
+        }
+        
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            print("🟡 didBecomeActiveNotification received")
+            timer.setUpTimer()
+            
+        }
     }
+    
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(TimerClass())
     }
 }

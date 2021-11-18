@@ -33,6 +33,8 @@
 		95B7D90F2746B31C00E0D49F /* ModalStopTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */; };
 		95DD8C3D2746AAD800471C55 /* TimeTrackingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */; };
 		95DF08FF2745418400F8C47E /* MainProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF08FE2745418400F8C47E /* MainProfileView.swift */; };
+		EEE455012746D4FB00C17BB7 /* TimerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE455002746D4FB00C17BB7 /* TimerClass.swift */; };
+		EEE455022746D4FB00C17BB7 /* TimerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE455002746D4FB00C17BB7 /* TimerClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 		95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalStopTracking.swift; sourceTree = "<group>"; };
 		95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackingScreenView.swift; sourceTree = "<group>"; };
 		95DF08FE2745418400F8C47E /* MainProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileView.swift; sourceTree = "<group>"; };
+		EEE455002746D4FB00C17BB7 /* TimerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				44DFC5832743F7F7006112D0 /* RoutineStruct.swift */,
+				EEE455002746D4FB00C17BB7 /* TimerClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +362,7 @@
 				44533E302742DCB8001A3BD5 /* ChooseRoutineView.swift in Sources */,
 				44682CA727455D630023B683 /* ModalSetting2.swift in Sources */,
 				44682CA427455BE10023B683 /* ModalSetting1.swift in Sources */,
+				EEE455012746D4FB00C17BB7 /* TimerClass.swift in Sources */,
 				44682CA1274559D00023B683 /* SettingView.swift in Sources */,
 				95DD8C3D2746AAD800471C55 /* TimeTrackingScreenView.swift in Sources */,
 				44533E182742DC4C001A3BD5 /* Track_A_GotchiApp.swift in Sources */,
@@ -377,6 +382,7 @@
 				44682CA527455BE10023B683 /* ModalSetting1.swift in Sources */,
 				44682CA2274559D00023B683 /* SettingView.swift in Sources */,
 				44533E192742DC4C001A3BD5 /* Track_A_GotchiApp.swift in Sources */,
+				EEE455022746D4FB00C17BB7 /* TimerClass.swift in Sources */,
 				44533E342742DEF6001A3BD5 /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

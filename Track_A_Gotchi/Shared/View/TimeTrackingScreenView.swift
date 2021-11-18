@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimeTrackingScreenView: View {
     @State private var showModal = false
+    @EnvironmentObject var timer: TimerClass
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
 //            ZStack {
@@ -36,7 +37,7 @@ struct TimeTrackingScreenView: View {
                 .frame(width: .infinity, height:150, alignment: .center)
                 Spacer()
                 // TIMER PLACEHOLDER
-                Text("00:00:00")
+                Text(timer.makeTimeString(accumulatedTime: timer.timeRemaining))
                 Spacer()
                 // 3.3 Stop tracking button
                 
@@ -62,6 +63,12 @@ struct TimeTrackingScreenView: View {
                 
 
             }
+            .onAppear {
+                
+                    print("⚪️ On appear notification received")
+                    timer.setUpTimer()
+//                    timer.restartTimer()
+            }
             
         }
         .frame(
@@ -78,6 +85,6 @@ struct TimeTrackingScreenView: View {
 
 struct TimeTrackingScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeTrackingScreenView()
+        TimeTrackingScreenView().environmentObject(TimerClass())
     }
 }
