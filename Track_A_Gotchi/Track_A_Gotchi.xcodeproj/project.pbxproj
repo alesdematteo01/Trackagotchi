@@ -23,6 +23,7 @@
 		44533E342742DEF6001A3BD5 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44533E322742DEF6001A3BD5 /* MainScreenView.swift */; };
 		44DFC5842743F7F7006112D0 /* RoutineStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFC5832743F7F7006112D0 /* RoutineStruct.swift */; };
 		44DFC5852743F7F7006112D0 /* RoutineStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFC5832743F7F7006112D0 /* RoutineStruct.swift */; };
+		95DF08FF2745418400F8C47E /* MainProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF08FE2745418400F8C47E /* MainProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		44533E2F2742DCB8001A3BD5 /* ChooseRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRoutineView.swift; sourceTree = "<group>"; };
 		44533E322742DEF6001A3BD5 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		44DFC5832743F7F7006112D0 /* RoutineStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStruct.swift; sourceTree = "<group>"; };
+		95DF08FE2745418400F8C47E /* MainProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		44533DEF2742DC49001A3BD5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				95DF09012745420A00F8C47E /* InterfaceLuigi */,
 				44533DF02742DC49001A3BD5 /* Track_A_GotchiApp.swift */,
 				44533E322742DEF6001A3BD5 /* MainScreenView.swift */,
 				44533DF12742DC49001A3BD5 /* ContentView.swift */,
@@ -151,6 +154,14 @@
 				44533E162742DC4C001A3BD5 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		95DF09012745420A00F8C47E /* InterfaceLuigi */ = {
+			isa = PBXGroup;
+			children = (
+				95DF08FE2745418400F8C47E /* MainProfileView.swift */,
+			);
+			path = InterfaceLuigi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 				44533E302742DCB8001A3BD5 /* ChooseRoutineView.swift in Sources */,
 				44533E182742DC4C001A3BD5 /* Track_A_GotchiApp.swift in Sources */,
 				44533E332742DEF6001A3BD5 /* MainScreenView.swift in Sources */,
+				95DF08FF2745418400F8C47E /* MainProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

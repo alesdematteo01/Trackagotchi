@@ -15,7 +15,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    .offset( y: -40)
+                    .offset( y: -60)
                 TabView{
                     ChooseRoutineView(routine: routine1)
                     
@@ -30,7 +30,13 @@ struct ContentView: View {
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
 
             }
-
+            .frame(
+                  minWidth: 0,
+                  maxWidth: .infinity,
+                  minHeight: 0,
+                  maxHeight: .infinity,
+                  alignment: .topLeading
+                )
         }
     }
 }

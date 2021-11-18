@@ -37,13 +37,14 @@ struct ChooseRoutineView: View {
                         Text("""
                              \(Image(systemName: "chevron.left"))
                              """)
-                            .font(.title)
+                            .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(Color.blue)
                             .padding()
                         Spacer()
                     }
                 }
+                .frame(alignment: .center)
                 Text(routine.description)
                         .font(.body)
                         .fontWeight(.regular)
@@ -80,5 +81,6 @@ struct ChooseRoutineView: View {
 
             Spacer()
         }
+        .frame(width: .infinity, height: .infinity, alignment: .topLeading)
     }
 }
