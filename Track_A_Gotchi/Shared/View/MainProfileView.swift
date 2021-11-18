@@ -128,8 +128,8 @@ struct MainProfileView: View {
                                 .foregroundColor(Color.white)
                         }
                         .frame(width: 60, height: 60, alignment: .center)
-                        .background(RoundedRectangle(cornerRadius: 40).fill(.blue))
-                        .cornerRadius(4)
+                        .background(Circle().fill(.blue))
+                        .cornerRadius(0)
                         .shadow(color: .gray, radius: 2, x: 0, y: 1)
                     }
                     .frame (
