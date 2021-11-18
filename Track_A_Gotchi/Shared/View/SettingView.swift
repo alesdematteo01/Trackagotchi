@@ -11,7 +11,7 @@ struct SettingView: View {
     @State private var showModal = false
     @Binding var routine: Routine
     var body: some View {
-        NavigationView{
+
             VStack {
                 Image(routine.imageName)
                     .resizable()
@@ -76,7 +76,6 @@ struct SettingView: View {
                 
             }
             .navigationTitle("Setting")
-        }
     }
 }
 

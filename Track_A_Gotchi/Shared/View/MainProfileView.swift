@@ -122,7 +122,16 @@ struct MainProfileView: View {
                         }
                         Spacer()
                         // 3.3 Start tracking button
-                        Button( action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                        Button( action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                            Image(systemName: "play.fill")
+//                                .font(.largeTitle)
+//                                .foregroundColor(Color.white)
+//                        }
+//                        .frame(width: 60, height: 60, alignment: .center)
+//                        .background(Circle().fill(.blue))
+//                        .cornerRadius(0)
+//                        .shadow(color: .gray, radius: 2, x: 0, y: 1)
+                        NavigationLink(destination: TimeTrackingScreenView()) {
                             Image(systemName: "play.fill")
                                 .font(.largeTitle)
                                 .foregroundColor(Color.white)
@@ -160,8 +169,4 @@ struct MainProfileView: View {
     }
 }
 
-//struct MainProfileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainProfileView()
-//    }
-//}
+

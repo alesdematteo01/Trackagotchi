@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4435C9852746B0CC002A9648 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4435C9842746B0CC002A9648 /* InventoryView.swift */; };
 		44533E092742DC4C001A3BD5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44533E082742DC4C001A3BD5 /* Tests_iOS.swift */; };
 		44533E0B2742DC4C001A3BD5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44533E0A2742DC4C001A3BD5 /* Tests_iOSLaunchTests.swift */; };
 		44533E152742DC4C001A3BD5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44533E142742DC4C001A3BD5 /* Tests_macOS.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4435C9842746B0CC002A9648 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		44533DF02742DC49001A3BD5 /* Track_A_GotchiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track_A_GotchiApp.swift; sourceTree = "<group>"; };
 		44533DF12742DC49001A3BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44533DF22742DC4B001A3BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,8 +117,9 @@
 				44682CA627455D620023B683 /* ModalSetting2.swift */,
 				44533DF12742DC49001A3BD5 /* ContentView.swift */,
 				44533E2F2742DCB8001A3BD5 /* ChooseRoutineView.swift */,
-				4435C97D2746A32D002A9648 /* Model */,
 				95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */,
+				4435C9842746B0CC002A9648 /* InventoryView.swift */,
+				4435C97D2746A32D002A9648 /* Model */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44DFC5842743F7F7006112D0 /* RoutineStruct.swift in Sources */,
+				4435C9852746B0CC002A9648 /* InventoryView.swift in Sources */,
 				44533E1A2742DC4C001A3BD5 /* ContentView.swift in Sources */,
 				44533E302742DCB8001A3BD5 /* ChooseRoutineView.swift in Sources */,
 				44682CA727455D630023B683 /* ModalSetting2.swift in Sources */,
