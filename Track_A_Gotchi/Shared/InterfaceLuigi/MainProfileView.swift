@@ -7,38 +7,11 @@
 
 import SwiftUI
 
-struct TaskListView: View {
-    
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                List {
-                    Section(
-                        header:
-                            Text("Your tasks of today")
-                            .font(.subheadline),
-                        footer:
-                            Text("End. Enjoy your free time!")
-                            .font(.subheadline)
-                    ) {
-                        HStack {
-                            Text("I'm in the first 🥇 section")
-                            
-                        }
-                        Text("Number 1️⃣")
-                    }
-                }
-                .listStyle(GroupedListStyle ())
-                
-            }
-        }
-    }
-}
-
-
 struct MainProfileView: View {
     var body: some View {
+        // 1. Top section: header bar + character slot
         VStack(alignment: .leading, spacing: 0) {
+            // 1.1 Title Bar
             VStack(alignment: .leading, spacing: 0) {
                 ZStack {
                     Rectangle()
@@ -62,8 +35,9 @@ struct MainProfileView: View {
                     .padding()
                 }
                 .offset(y:-2)
+                // 1.2 Character
                 ZStack(alignment: .topLeading) {
-                    //Image should be replaced with 3D object
+                    // 1.3 Character image (should be replaced with 3D object)
                     HStack(alignment: .center) {
                         Spacer()
                         Image("Dog.J01.2k")
@@ -73,10 +47,12 @@ struct MainProfileView: View {
                         Spacer()
                     }
                     .frame(width: .infinity, height:360, alignment: .center)
+                    // 1.4 High section w/ healthbar + Inventory button
                     HStack(alignment: .top) {
-                        //Healthbar should be replaced with healthbar struct
+                        // 1.5 Healthbar (should be replaced with healthbar struct)
                         Text("HealthBar")
                         Spacer()
+                        // 1.6 Inventory button
                         Button( action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                             Image("Inventory")
                                 .resizable()
@@ -94,17 +70,25 @@ struct MainProfileView: View {
                 }
             }
             .background(Color(red: 0.949, green: 0.949, blue: 0.969))
+            
+            // 2. Task list
             ScrollView(.vertical, showsIndicators: false) {
+                // N.b. Stack w/ declared height is required to show content
                 VStack {
+                    // 2.1 Task list content
                     List {
+                        // N.b. Section is required to style contents
                         Section(
+                            // Top text
                             header:
                                 Text("Your tasks of today")
                                 .font(.subheadline),
+                            // Bottom text
                             footer:
                                 Text("End. Enjoy your free time!")
                                 .font(.subheadline)
-                        ) {
+                        ) // 2.2 Activities
+                        {
                             Text("I'm a task 🥇")
                             Text("I'm a task 🥇")
                             Text("I'm a task 🥇")
@@ -118,9 +102,11 @@ struct MainProfileView: View {
             }
             .frame(maxWidth: .infinity)
             
-            
+            // 3. Footer w/ tracking bar/button
             Group {
+                // 3.1 Tracking bar
                 ZStack {
+                    // 3.2 Callouts
                     HStack(alignment: .center) {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("It's [task] time")
@@ -131,6 +117,7 @@ struct MainProfileView: View {
                                 .fontWeight(.bold)
                         }
                         Spacer()
+                        // 3.3 Start tracking button
                         Button( action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                             Image(systemName: "play.fill")
                                 .font(.largeTitle)
@@ -149,7 +136,6 @@ struct MainProfileView: View {
                     .cornerRadius(4)
                     .shadow(color: .gray, radius: 2, x: 0, y: 1)
                 }
-                //                .background(Color(red: 0.949, green: 0.949, blue: 0.969))
                 .padding()
                 .frame (width: .infinity)
             }
@@ -166,6 +152,7 @@ struct MainProfileView: View {
     }
 }
 
+// For preview purposes only: delete in final package
 struct MainProfileView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
