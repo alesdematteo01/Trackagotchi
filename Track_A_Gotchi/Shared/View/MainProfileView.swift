@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainProfileView: View {
+    @Binding var routine: Routine
     var body: some View {
         // 1. Top section: header bar + character slot
         VStack(alignment: .leading, spacing: 0) {
@@ -24,7 +25,10 @@ struct MainProfileView: View {
                                 Text("Profile")
                             }
                             Spacer()
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                                Image(systemName: "gear")
+//                            }
+                            NavigationLink(destination: SettingView(routine: $routine)) {
                                 Image(systemName: "gear")
                             }
                         }
@@ -40,7 +44,7 @@ struct MainProfileView: View {
                     // 1.3 Character image (should be replaced with 3D object)
                     HStack(alignment: .center) {
                         Spacer()
-                        Image("Dog.J01.2k")
+                        Image(routine.imageName)
                             .resizable()
                             .scaledToFit()
                             .padding()
@@ -149,14 +153,7 @@ struct MainProfileView: View {
             alignment: .topLeading
         )
         .background(Color.white)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
-// For preview purposes only: delete in final package
-struct MainProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MainProfileView()
-        }
-    }
-}

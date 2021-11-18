@@ -9,10 +9,11 @@ import SwiftUI
 
 struct SettingView: View {
     @State private var showModal = false
+    @Binding var routine: Routine
     var body: some View {
         NavigationView{
             VStack {
-                Image("pet1")
+                Image(routine.imageName)
                     .resizable()
                     .frame(width: 100, height: 100)
                 Spacer()
@@ -77,8 +78,3 @@ struct SettingView: View {
     }
 }
 
-struct SettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingView()
-    }
-}
