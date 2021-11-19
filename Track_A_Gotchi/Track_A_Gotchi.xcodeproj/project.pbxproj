@@ -129,6 +129,7 @@
 				95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */,
 				95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */,
 				4435C9842746B0CC002A9648 /* InventoryView.swift */,
+				5ECC4CB02748045C00148216 /* progressBar.swift */,
 				4435C97D2746A32D002A9648 /* Model */,
 				5ECC4CB22748049A00148216 /* progressBarView.swift */,
 			);
@@ -140,7 +141,6 @@
 			children = (
 				44DFC5832743F7F7006112D0 /* RoutineStruct.swift */,
 				EEE455002746D4FB00C17BB7 /* TimerClass.swift */,
-				5ECC4CB02748045C00148216 /* progressBar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
