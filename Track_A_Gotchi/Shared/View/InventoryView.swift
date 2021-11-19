@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InventoryView: View {
     
-    @State var rewards: [String] = ["🥯", "🍱","🍛", "🥖", "🥓", "🥑", "🥒", "🍟", "🫑", "🧅", "🥓", "🍕", "🥑","◻︎","◻︎"]
+    @State var rewards: [String] = ["🥯", "🍱","🍛", "🥖", "🥓", "🥑", "🥒", "🍟", "🫑", "🧅", "🥓", "🍕", "🥑","⬜️","⬜️"]
     @Binding var routine: Routine
     @State var columns: [GridItem] = [
             GridItem(.fixed(100), spacing: 16),
@@ -33,13 +33,14 @@ struct InventoryView: View {
                 LazyVGrid(columns: columns, alignment: .leading, spacing: 32){
                         ForEach(rewards.indices, id: \.self) { index in
                             let item = rewards[index]
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                                Text("\(item)")
-                                    .font(.system(size: 40))
-                                    .frame(width: 80, height: 80)
-                                    .background(Color.white)
-                                    .shadow(radius: 3)
+                            Button("\(item)") {
+                                rewards[index] = "⬜️"
                             }
+                            .font(.system(size: 40))
+                            .frame(width: 80, height: 80)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .shadow(radius: 3)
                         }
                     }
                 }
