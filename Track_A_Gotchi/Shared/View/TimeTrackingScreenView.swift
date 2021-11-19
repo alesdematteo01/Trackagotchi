@@ -54,7 +54,7 @@ struct TimeTrackingScreenView: View {
                 
                 Button {
                     self.showModal.toggle()
-                    timer.stopTimer()
+//                    timer.stopTimer()
                 } label: {
                     Image(systemName: "stop.fill")
                         .font(.system(size: 80))
