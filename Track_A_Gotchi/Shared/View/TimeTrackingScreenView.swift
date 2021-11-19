@@ -41,11 +41,21 @@ struct TimeTrackingScreenView: View {
                 Spacer()
                 // 3.3 Stop tracking button
                 
-                Button( action: {self.showModal.toggle()}) {
+//                Button( action: {self.showModal.toggle()}) {
+//                    Image(systemName: "stop.fill")
+//                        .font(.system(size: 80))
+//                        .foregroundColor(Color.white)
+//                }
+                
+                Button {
+                    self.showModal.toggle()
+                    timer.stopTimer()
+                } label: {
                     Image(systemName: "stop.fill")
                         .font(.system(size: 80))
                         .foregroundColor(Color.white)
                 }
+                
                 .sheet(isPresented: $showModal){
                     ModalStopTracking(showModal: self.$showModal)
                 }

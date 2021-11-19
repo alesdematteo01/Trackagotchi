@@ -77,6 +77,12 @@ class TimerClass: ObservableObject {
     }
     
     
+    func stopTimer() {
+        timer.upstream.connect().cancel()
+        saveRemainingTime()
+    }
+    
+    
     func makeTimeString(accumulatedTime: TimeInterval) -> String {
         let hours = Int(accumulatedTime) / 3600
         let minutes = Int(accumulatedTime) / 60 % 60
