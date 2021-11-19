@@ -10,7 +10,7 @@ import UIKit
 
 struct ModalStopTracking: View {
     @Binding var showModal: Bool
-        
+    @EnvironmentObject var timer: TimerClass
     var body: some View {
         NavigationView {
             VStack {

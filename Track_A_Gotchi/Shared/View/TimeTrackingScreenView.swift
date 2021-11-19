@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TimeTrackingScreenView: View {
+    
     @State private var showModal = false
     @EnvironmentObject var timer: TimerClass
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
 //            ZStack {
@@ -80,7 +82,6 @@ struct TimeTrackingScreenView: View {
                 
                     print("⚪️ On appear notification received")
                     timer.setUpTimer()
-//                    timer.restartTimer()
             }
             
         }
