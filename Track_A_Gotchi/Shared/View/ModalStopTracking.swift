@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ModalStopTracking: View {
     @Binding var showModal: Bool
+    @EnvironmentObject var timer: TimerClass
     var body: some View {
         VStack {
             Text("Opzione 1")
@@ -18,6 +19,7 @@ struct ModalStopTracking: View {
             Spacer()
             Button("Resume") {
                 self.showModal.toggle()
+                self.timer.isActive = true
             }
         }
     }

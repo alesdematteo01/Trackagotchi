@@ -12,7 +12,7 @@ class TimerClass: ObservableObject {
     @State var savedDate: Date? = nil
     @State var currentDate: Date?  = nil
     @Published var timeRemaining: TimeInterval = 0
-    @State var isActive = false
+    @State var isActive = true
     
     let numberOfHours = 1.0
     @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -26,15 +26,13 @@ class TimerClass: ObservableObject {
         // 3. if no or it is equal to zero
         // start a new timer with the full amount of seconds
         
-        if self.timeRemaining == 0 {
+         if self.timeRemaining == 0.0 {
             print("Time remaining wasn't saved")
             self.timeRemaining = TimeInterval(numberOfHours * 3600)
         } else {
             self.timeRemaining = UserDefaults.standard.double(forKey: "timeRemaining")
             print("the saved value of time remaining is: \(self.timeRemaining)")
             restartTimer()
-            
-            
         }
     }
     
@@ -53,7 +51,13 @@ class TimerClass: ObservableObject {
     
      func restartTimer() {
         // 1. Get the time when the user left the application
-        let date = UserDefaults.standard.object(forKey: "timeWhenUserLeftTheApp") as! Date
+         
+         guard let date = UserDefaults.standard.object(forKey: "timeWhenUserLeftTheApp") as? Date else { self.timeRemaining =  TimeInterval(numberOfHours * 3600)
+             return
+         }
+             
+         
+         
         let currentDate = Date()
         print("GETTING saved date: \(date)")
         
@@ -74,11 +78,12 @@ class TimerClass: ObservableObject {
         } else {
             self.timeRemaining = 0
         }
+         
     }
     
     
     func stopTimer() {
-        timer.upstream.connect().cancel()
+        self.isActive = false
         saveRemainingTime()
     }
     
