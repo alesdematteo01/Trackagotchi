@@ -27,26 +27,26 @@ struct ContentView: View {
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
-
+                
             }
             .frame(
-                  minWidth: 0,
-                  maxWidth: .infinity,
-                  minHeight: 0,
-                  maxHeight: .infinity,
-                  alignment: .topLeading
-                )
+                minWidth: 0,
+                maxWidth: .infinity,
+                minHeight: 0,
+                maxHeight: .infinity,
+                alignment: .topLeading
+            )
         }
         .navigationBarBackButtonHidden(true)
-
         
-        .onAppear {
-            print("⚪️ On appear notification received")
-            timer.setUpTimer()
-        }
+        
+        //        .onAppear {
+        //            print("⚪️ On appear notification received")
+        //            timer.setUpTimer()
+        //        }
         
         .onReceive(timer.timer) { time in
-            
+            guard timer.isActive else { return }
             if timer.timeRemaining > 0 {
                 timer.timeRemaining -= 1
             }
@@ -67,11 +67,11 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
             print("🟡 didBecomeActiveNotification received")
             timer.setUpTimer()
+            print("the time remaining is \(timer.timeRemaining)")
             
         }
-    }
-    
         
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
