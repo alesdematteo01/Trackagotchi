@@ -115,17 +115,17 @@
 		4435C97C2746A319002A9648 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44533E2F2742DCB8001A3BD5 /* ChooseRoutineView.swift */,
 				95DF08FE2745418400F8C47E /* MainProfileView.swift */,
 				44533E322742DEF6001A3BD5 /* MainScreenView.swift */,
 				44682CA0274559D00023B683 /* SettingView.swift */,
 				44682CA327455BE10023B683 /* ModalSetting1.swift */,
 				44682CA627455D620023B683 /* ModalSetting2.swift */,
 				44533DF12742DC49001A3BD5 /* ContentView.swift */,
-				44533E2F2742DCB8001A3BD5 /* ChooseRoutineView.swift */,
 				95DD8C3C2746AAD800471C55 /* TimeTrackingScreenView.swift */,
+				95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */,
 				4435C9842746B0CC002A9648 /* InventoryView.swift */,
 				4435C97D2746A32D002A9648 /* Model */,
-				95B7D90E2746B31C00E0D49F /* ModalStopTracking.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
