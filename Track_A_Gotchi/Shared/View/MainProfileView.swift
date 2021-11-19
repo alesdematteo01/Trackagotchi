@@ -57,7 +57,17 @@ struct MainProfileView: View {
                         Text("HealthBar")
                         Spacer()
                         // 1.6 Inventory button
-                        Button( action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                        Button( action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+//                            Image("Inventory")
+//                                .resizable()
+//                                .scaledToFill()
+//                        }
+//                        .frame(width: 60, height: 60, alignment: .center)
+//                        .padding(4)
+//                        .background(RoundedRectangle(cornerRadius: 10).fill(.white))
+//                        .cornerRadius(4)
+//                        .shadow(color: .gray, radius: 2, x: 0, y: 1)
+                        NavigationLink(destination: InventoryView(routine: $routine)) {
                             Image("Inventory")
                                 .resizable()
                                 .scaledToFill()
@@ -67,7 +77,6 @@ struct MainProfileView: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(.white))
                         .cornerRadius(4)
                         .shadow(color: .gray, radius: 2, x: 0, y: 1)
-                        
                         
                     }
                     .padding()
