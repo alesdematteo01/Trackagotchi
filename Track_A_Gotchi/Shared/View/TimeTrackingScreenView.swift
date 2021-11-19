@@ -93,6 +93,7 @@ struct TimeTrackingScreenView: View {
         )
         .background(Color.white)
         .navigationTitle("[Task Title]")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
     }
 }
