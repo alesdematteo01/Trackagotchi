@@ -30,16 +30,19 @@ struct TimeTrackingScreenView: View {
                 Spacer()
                 HStack(alignment: .center) {
                     Spacer()
-                    Image("Dog.J01.2k")
+                    Image("Dog.K01.2k")
                         .resizable()
                         .scaledToFit()
                         .padding()
                     Spacer()
                 }
                 .frame(width: .infinity, height:150, alignment: .center)
-                Spacer()
+//                Spacer()
                 // TIMER PLACEHOLDER
                 Text(timer.makeTimeString(accumulatedTime: timer.timeRemaining))
+                    .font(.system(size: 72))
+                Text("Time scheduled: 01:00:00")
+                    .foregroundColor(.gray)
                 Spacer()
                 // 3.3 Stop tracking button
                 
@@ -91,6 +94,7 @@ struct TimeTrackingScreenView: View {
         )
         .background(Color.white)
         .navigationTitle("[Task Title]")
+        .navigationBarBackButtonHidden(true)
     }
 }
 
